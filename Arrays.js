@@ -32,10 +32,10 @@ class TestArray {
 
   delete(index) {   //delete method has an 0(n) complexity because it calls another method which has a for loop
     //removes a property from an object
-    const item = this.data[index];
-    delete this.data[index];
-
-    this.shiftIndex(index)
+    this.shift(index);
+    // this.length--;
+    delete this.data[this.length-1];
+    this.length--;
   }
 
   /*
@@ -57,12 +57,9 @@ class TestArray {
   */
   shiftIndex(index) {
       //want to go to the end of the array
-    for (var i = index; i < this.data.length-1; i++) {
+    for (var i = index; i < this.length-1; i++) {
       this.data[i] = this.data[i+1];
     }
-
-    delete this.data[this.data.length-1];
-    this.length--;
   }
 
 }
