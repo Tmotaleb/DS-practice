@@ -11,7 +11,6 @@ var findMaxConsecutiveOnes = function(num) {
           arr.push(count);
           count = 0;
       }
-
   }
   arr.push(count)
 
