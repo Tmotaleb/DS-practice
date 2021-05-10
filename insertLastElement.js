@@ -20,10 +20,12 @@
 
 
 //Inserting at the start of an array /shifting
+var arr = [1, 2, 3, 4, 5, 6]
 
-
-for (var i = 3; i >= 0; i--) {
+for (var i = 3; i > 0; i--) {
   arr[i] = arr[i+1];
 }
+
+arr[0] = 20
 console.log(arr)
 
