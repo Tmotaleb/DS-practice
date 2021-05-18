@@ -27,20 +27,11 @@
 
 var merge = function (nums1, m, nums2, n) {
 
-nums1 = nums1.splice(0, m)
-console.log(nums1)
-
-  var p1 = 0;
-  var p2 = 0;
-
-for (var i = 0; i < nums1.length; i++) {
-  if (nums2[p2] > nums1[p1]) {
-    nums1[p1] = nums2[p2]
-    p1++;
-  }
+for (var i = 0; i < n; i++) {
+  nums1[i+m] = nums2[i];
 }
-console.log(nums1)
 
+nums1.sort()
 }
 
 
