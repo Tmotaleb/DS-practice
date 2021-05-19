@@ -1,15 +1,29 @@
 
 
-var insertEven = (num) => {
+var swapString = (arr) => {
 
-  var obj = {};
-  var count = 0;
+  var str = ''
+  for (var i = 0; i < arr.length; i++) {
+    debugger;
+    //console.log(`row ${arr.indexOf(arr[i])}`);
+    // return `row ${arr.indexOf(arr[i])}`
+    // for (var j = 0; j < arr[i].length; j++) {
+    //   console.log(arr[i][j])
 
-  for (var i = 0; i < num.length; i++) {
+    // }
+
+      // str += `row ${arr.indexOf(arr[i])}`
+      console.log(`row ${i}`)
+      for (var j = 0; j < arr[i].length; j++) {
+        console.log(arr[i][j])
+        // str += arr[i][j]
+       // return arr[i][j]
+
+      }
 
   }
-console.log(obj)
+  // return str;
 }
 
 
-console.log(insertEven([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
+console.log(swapString([[1, 2, 1, 24], [8, 11, 9, 4]]));
