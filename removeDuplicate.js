@@ -4,18 +4,26 @@
 
 const removeDuplicate = (arr) => {
 
+  //check for duplicates
+
   var newArr = [];
 
-  var pointer = arr[0]
   for (var i = 0; i < arr.length; i++) {
-    if (pointer !== arr[i]) {
-      newArr.push('yup')
+    debugger;
+    if (isNaN(arr[i]) === true) {
+      arr[i] = arr[i].toLowerCase();
     }
-    newArr.push('nope')
+
+    if (newArr.indexOf(arr[i]) === -1) {
+      newArr.push(arr[i])
+    } else if (newArr.indexOf(arr[i]) > -1){
+      continue;
+    }
   }
-return newArr
+
+return newArr;
 }
 
 
-console.log(removeDuplicate([23, 12, 25, 12]));
+console.log(removeDuplicate(['a', 'A', 2, 5, 7, 7, 'a', 5, 0, 0]));
 
